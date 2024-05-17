@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote  name="aosp" fetch="https://android.googlesource.com" review="https://android-review.googlesource.com/" />
   <default revision="main" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android15-6.6" />
@@ -12,7 +12,8 @@
     <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="WORKSPACE.bzlmod" />
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" />
-  <project path="common" name="kernel/common" revision="android15-6.6" />
+  <remote  name="arpi" fetch="."/>
+  <project path="common" name="kernel_arpi" revision="arpi15-6.6" remote="arpi" />
   <project path="kernel/common-patches" name="kernel/common-patches" >
       <linkfile src="android-mainline" dest="common/patches" />
   </project>
