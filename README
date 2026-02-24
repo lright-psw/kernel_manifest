@@ -8,11 +8,11 @@
   $ repo sync
 
 # Build Kernel
-  $ tools/bazel run --config=release //common:arpi6_dist
-  # compatibility alias (legacy)
   $ tools/bazel run --config=release //common:arpi5_dist
+  # compatibility alias
+  $ tools/bazel run --config=release //common:arpi6_dist
 
-  Output files are under out/arpi6/dist/
+  Output files are under out/arpi5/dist/
     Image.gz
     bcm2712-rpi-5-b.dtb
     vc4-kms-v3d-pi5.dtbo
