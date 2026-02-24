@@ -12,8 +12,8 @@
     <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="WORKSPACE.bzlmod" />
   </project>
   <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="ddk" />
-  <remote  name="arpi" fetch="."/>
-  <project path="common" name="kernel_arpi" revision="arpi15-6.6" remote="arpi" />
+  <remote  name="arpi" fetch="https://github.com/lright-psw/" />
+  <project path="common" name="kernel_arpi" revision="arpi16-6.12" remote="arpi" />
   <project path="kernel/common-patches" name="kernel/common-patches" >
       <linkfile src="android-mainline" dest="common/patches" />
   </project>
