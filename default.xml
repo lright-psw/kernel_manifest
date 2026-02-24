@@ -5,7 +5,7 @@
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android16-6.12" />
 
-  <project path="build/kernel" name="kernel/build" groups="ddk" >
+  <project path="build/kernel" name="kernel/build" revision="main-kernel-2025" groups="ddk" >
     <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
     <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="MODULE.bazel" />
@@ -20,23 +20,24 @@
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" revision="main" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android16-6.12" />
-  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="main-kernel" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="main-kernel-2025" clone-depth="1" groups="ddk" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" groups="ddk" />
-  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" groups="ddk" />
-  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" groups="ddk" />
-  <project path="prebuilts/rust" name="platform/prebuilts/rust" revision="main-kernel" clone-depth="1" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" revision="main-kernel-2025" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" revision="main-kernel-2025" clone-depth="1" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" revision="main-kernel-2025" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/rust" name="platform/prebuilts/rust" revision="main-kernel-2025" clone-depth="1" />
   <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" clone-depth="1" />
   <project path="prebuilts/asuite" name="platform/prebuilts/asuite" clone-depth="1" />
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" />
 
-  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" revision="main-kernel" clone-depth="1" groups="ddk" />
-  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" revision="main-kernel-2025" clone-depth="1" groups="ddk" />
+  <project path="prebuilts/ndk-r26" name="toolchain/prebuilts/ndk/r26" revision="main-kernel-2025" clone-depth="1" groups="ddk" />
 
   <project path="external/libcap-ng" name="platform/external/libcap-ng"/>
   <project path="external/libcap" name="platform/external/libcap"/>
 
   <!-- deps for for bzlmod -->
+  <project path="external/bazel-contrib-bazel_features" name="platform/external/bazel-contrib-bazel_features" groups="ddk-external" />
   <project path="external/bazel-skylib" name="platform/external/bazel-skylib" groups="ddk-external" />
   <project path="external/bazelbuild-bazel-central-registry" name="platform/external/bazelbuild-bazel-central-registry" groups="ddk-external" />
   <project path="external/bazelbuild-platforms" name="platform/external/bazelbuild-platforms" groups="ddk-external" />
@@ -46,6 +47,7 @@
   <project path="external/bazelbuild-rules_license" name="platform/external/bazelbuild-rules_license" groups="ddk-external" />
   <project path="external/bazelbuild-rules_pkg" name="platform/external/bazelbuild-rules_pkg" groups="ddk-external" />
   <project path="external/bazelbuild-rules_python" name="platform/external/bazelbuild-rules_python" groups="ddk-external" />
+  <project path="external/bazelbuild-rules_shell" name="platform/external/bazelbuild-rules_shell" groups="ddk-external" />
   <project path="external/python/absl-py" name="platform/external/python/absl-py" groups="ddk-external" />
   <project path="external/stardoc" name="platform/external/stardoc" />
 
